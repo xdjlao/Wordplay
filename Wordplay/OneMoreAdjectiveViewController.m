@@ -31,15 +31,14 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ResultsViewController *destination = segue.destinationViewController;
+    
+    // Set story object's oneMoreAdjective property
     self.story.oneMoreAdjective = self.oneMoreAdjectiveTextField.text;
+    
+    // Pass story object to destination view controller
+    ResultsViewController *destination = segue.destinationViewController;
     destination.story = self.story;
-//    destination.anotherAdjective = self.anotherAdjective;
-//    destination.name = self.name;
-//    destination.adjective = self.adjective;
-//    destination.oneMoreAdjective = self.oneMoreAdjectiveTextField.text;
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
 }
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([self.oneMoreAdjectiveTextField.text isEqualToString:@""]) {
@@ -50,6 +49,9 @@
         return YES;
     }
     
+}
+- (IBAction)onTap:(UITapGestureRecognizer *)sender {
+    [self.oneMoreAdjectiveTextField resignFirstResponder];
 }
 
 

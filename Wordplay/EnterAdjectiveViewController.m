@@ -32,23 +32,24 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    EnterAnotherAdjectiveViewController *destination = segue.destinationViewController;
-//    destination.adjective = self.adjectiveTextField.text;
-//    destination.name = self.name;
+    
+    // Set story object's adjective property
     self.story.adjective = self.adjectiveTextField.text;
+    
+    // Pass story object to destination view controller
+    EnterAnotherAdjectiveViewController *destination = segue.destinationViewController;
     destination.story = self.story;
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([self.adjectiveTextField.text isEqualToString:@""]) {
         return NO;
-    }
-    else
-    {
+    } else {
         return YES;
     }
     
+}
+- (IBAction)onTap:(UITapGestureRecognizer *)sender {
+    [self.adjectiveTextField resignFirstResponder];
 }
 
 

@@ -27,15 +27,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="WYo-XM-kEA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="6Rn-oF-C0h"/>
                             <constraint firstItem="WYo-XM-kEA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aJS-K2-r1v"/>
                             <constraint firstItem="WYo-XM-kEA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gTi-Wn-h0a"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2cA-VA-5Id" appends="YES" id="V05-Mm-UEP"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Aja-SR-Apb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2cA-VA-5Id"/>
             </objects>
             <point key="canvasLocation" x="662" y="291"/>
         </scene>
@@ -74,6 +79,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Wvy-TW-W79" firstAttribute="leading" secondItem="XL0-g9-1qO" secondAttribute="leadingMargin" constant="89" id="263-WN-Ol0"/>
                             <constraint firstItem="Dmc-Tt-J3L" firstAttribute="centerX" secondItem="y04-Rg-zah" secondAttribute="centerX" id="9tR-XD-dGU"/>
@@ -84,6 +90,9 @@
                             <constraint firstItem="Wvy-TW-W79" firstAttribute="top" secondItem="xRA-87-Syi" secondAttribute="bottom" constant="73" id="rLd-SJ-zCP"/>
                             <constraint firstItem="Dmc-Tt-J3L" firstAttribute="top" secondItem="Wvy-TW-W79" secondAttribute="bottom" constant="37" id="rOM-Zo-YAh"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tZC-x2-qzt" appends="YES" id="xdZ-9M-Mf2"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Zjr-dv-LZv"/>
                     <connections>
@@ -91,6 +100,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y3J-oK-Xyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="tZC-x2-qzt">
+                    <connections>
+                        <action selector="onTap:" destination="Fnc-Vc-0gC" id="Blh-iO-a24"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1042" y="291"/>
         </scene>
@@ -114,7 +128,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-gG-vpz">
                                 <rect key="frame" x="106" y="269" width="109" height="30"/>
-                                <state key="normal" title="See mad lib"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="fXz-DY-6IG" kind="push" id="K01-jU-ok9"/>
                                 </connections>
@@ -126,6 +140,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="CbM-gG-vpz" firstAttribute="top" secondItem="EYd-zE-WxT" secondAttribute="bottom" constant="44" id="3Hf-O1-1dF"/>
                             <constraint firstItem="EYd-zE-WxT" firstAttribute="leading" secondItem="a1B-RA-0dS" secondAttribute="leadingMargin" constant="96" id="8UR-OH-7gW"/>
@@ -137,6 +152,9 @@
                             <constraint firstItem="SPw-QN-Vcc" firstAttribute="top" secondItem="L0p-4F-V2V" secondAttribute="bottom" constant="69" id="lyA-nK-dh4"/>
                             <constraint firstItem="SPw-QN-Vcc" firstAttribute="centerX" secondItem="a1B-RA-0dS" secondAttribute="centerX" id="wuX-Pp-MdU"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Ijx-PX-pCQ" appends="YES" id="gk6-VJ-f7S"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="gCz-c0-pOu"/>
                     <connections>
@@ -144,6 +162,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GWs-wR-8dS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ijx-PX-pCQ">
+                    <connections>
+                        <action selector="onTap:" destination="FBB-H0-Dm8" id="Ys9-GM-F3v"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1421" y="291"/>
         </scene>
@@ -170,7 +193,6 @@
                                 <rect key="frame" x="115" y="369" width="90" height="30"/>
                                 <state key="normal" title="Start over"/>
                                 <connections>
-                                    <action selector="startOver:" destination="FwX-Im-aOT" eventType="touchUpInside" id="hKb-Sm-0kg"/>
                                     <segue destination="yLx-Tc-SbQ" kind="unwind" unwindAction="prepareforUnwind:" id="saC-Ve-wyx"/>
                                 </connections>
                             </button>
@@ -219,7 +241,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="uuY-bC-OmI"/>
                                 </constraints>
-                                <state key="normal" title="next"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="zmc-ky-Vbn" kind="push" id="2bR-kb-Ji3"/>
                                 </connections>
@@ -231,6 +253,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ut6-F4-6EB" firstAttribute="centerX" secondItem="t5v-l9-WtE" secondAttribute="centerX" id="5mq-zL-JQt"/>
                             <constraint firstItem="t5v-l9-WtE" firstAttribute="leading" secondItem="yoG-qr-jTZ" secondAttribute="leadingMargin" constant="43" id="SSr-LB-39B"/>
@@ -241,6 +264,9 @@
                             <constraint firstItem="t5v-l9-WtE" firstAttribute="top" secondItem="PVr-PM-gFI" secondAttribute="bottom" constant="73" id="tGK-PC-Ish"/>
                             <constraint firstItem="t5v-l9-WtE" firstAttribute="centerX" secondItem="yoG-qr-jTZ" secondAttribute="centerX" id="uWq-Lh-cJg"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="67E-c2-zN8" appends="YES" id="ivo-KQ-4uX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="sTj-Mo-b0X"/>
                     <connections>
@@ -248,6 +274,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKm-AD-MXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="67E-c2-zN8">
+                    <connections>
+                        <action selector="onTap:" destination="fXz-DY-6IG" id="lnB-df-T9x"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1801" y="291"/>
         </scene>
@@ -273,12 +304,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="8o9-hs-O2J"/>
                                 </constraints>
-                                <state key="normal" title="next"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <segue destination="FwX-Im-aOT" kind="push" id="CeC-9y-6Y1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="one more adjective" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abq-LL-d0f">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One more adjective" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abq-LL-d0f">
                                 <rect key="frame" x="75" y="138" width="170" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -286,6 +317,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="FnT-Dx-ur4" firstAttribute="centerY" secondItem="fn6-Kf-QqD" secondAttribute="centerY" id="Ctt-8T-Z1W"/>
                             <constraint firstItem="Abq-LL-d0f" firstAttribute="leading" secondItem="fn6-Kf-QqD" secondAttribute="leadingMargin" constant="59" id="G4I-hp-jVN"/>
@@ -296,6 +328,9 @@
                             <constraint firstItem="Abq-LL-d0f" firstAttribute="centerX" secondItem="B0I-zJ-Zfz" secondAttribute="centerX" id="gkV-vL-bhp"/>
                             <constraint firstItem="FnT-Dx-ur4" firstAttribute="centerX" secondItem="B0I-zJ-Zfz" secondAttribute="centerX" id="xcg-SO-VE1"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ANf-XO-ekL" appends="YES" id="mJO-K5-Lsa"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="iES-et-Phe"/>
                     <connections>
@@ -303,6 +338,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsA-k3-sFi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ANf-XO-ekL">
+                    <connections>
+                        <action selector="onTap:" destination="zmc-ky-Vbn" id="6Fx-gk-4Zp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2199" y="291"/>
         </scene>
