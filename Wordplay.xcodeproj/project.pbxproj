@@ -18,6 +18,7 @@
 		A27B57A01C446AD6003AC95E /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B579F1C446AD6003AC95E /* ResultsViewController.m */; };
 		A27B57A31C447B12003AC95E /* EnterAnotherAdjectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B57A21C447B12003AC95E /* EnterAnotherAdjectiveViewController.m */; };
 		A27B57A61C447B6A003AC95E /* OneMoreAdjectiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A27B57A51C447B6A003AC95E /* OneMoreAdjectiveViewController.m */; };
+		A2A00B881C45679C00BE3417 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A00B871C45679C00BE3417 /* Story.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		A27B57A21C447B12003AC95E /* EnterAnotherAdjectiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterAnotherAdjectiveViewController.m; sourceTree = "<group>"; };
 		A27B57A41C447B6A003AC95E /* OneMoreAdjectiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneMoreAdjectiveViewController.h; sourceTree = "<group>"; };
 		A27B57A51C447B6A003AC95E /* OneMoreAdjectiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneMoreAdjectiveViewController.m; sourceTree = "<group>"; };
+		A2A00B861C45679C00BE3417 /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		A2A00B871C45679C00BE3417 /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +79,14 @@
 				A27B57811C446869003AC95E /* AppDelegate.h */,
 				A27B57821C446869003AC95E /* AppDelegate.m */,
 				A27B57871C446869003AC95E /* Main.storyboard */,
+				A2A00B861C45679C00BE3417 /* Story.h */,
+				A2A00B871C45679C00BE3417 /* Story.m */,
+				A27B579E1C446AD6003AC95E /* ResultsViewController.h */,
+				A27B579F1C446AD6003AC95E /* ResultsViewController.m */,
 				A27B57A41C447B6A003AC95E /* OneMoreAdjectiveViewController.h */,
 				A27B57A51C447B6A003AC95E /* OneMoreAdjectiveViewController.m */,
 				A27B57A11C447B12003AC95E /* EnterAnotherAdjectiveViewController.h */,
 				A27B57A21C447B12003AC95E /* EnterAnotherAdjectiveViewController.m */,
-				A27B579E1C446AD6003AC95E /* ResultsViewController.h */,
-				A27B579F1C446AD6003AC95E /* ResultsViewController.m */,
 				A27B579B1C446A51003AC95E /* EnterAdjectiveViewController.h */,
 				A27B579C1C446A51003AC95E /* EnterAdjectiveViewController.m */,
 				A27B57981C4469A1003AC95E /* EnterNameViewController.h */,
@@ -177,6 +182,7 @@
 				A27B57831C446869003AC95E /* AppDelegate.m in Sources */,
 				A27B57A31C447B12003AC95E /* EnterAnotherAdjectiveViewController.m in Sources */,
 				A27B57971C4468AB003AC95E /* MainViewController.m in Sources */,
+				A2A00B881C45679C00BE3417 /* Story.m in Sources */,
 				A27B579D1C446A51003AC95E /* EnterAdjectiveViewController.m in Sources */,
 				A27B57A61C447B6A003AC95E /* OneMoreAdjectiveViewController.m in Sources */,
 				A27B57A01C446AD6003AC95E /* ResultsViewController.m in Sources */,
@@ -328,6 +334,7 @@
 				A27B57941C446869003AC95E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

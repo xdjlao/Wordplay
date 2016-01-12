@@ -8,6 +8,7 @@
 
 #import "EnterNameViewController.h"
 #import "EnterAdjectiveViewController.h"
+#import "Story.h"
 
 @interface EnterNameViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -35,7 +36,10 @@
     // Pass the selected object to the new view controller.
     
         EnterAdjectiveViewController *destination = segue.destinationViewController;
-        destination.name = self.nameTextField.text;
+        Story *story = [Story new];
+        story.name = self.nameTextField.text;
+//        destination.name = self.nameTextField.text;
+        destination.story = story;
     
 }
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {

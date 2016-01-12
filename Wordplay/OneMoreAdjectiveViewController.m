@@ -32,10 +32,12 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ResultsViewController *destination = segue.destinationViewController;
-    destination.anotherAdjective = self.anotherAdjective;
-    destination.name = self.name;
-    destination.adjective = self.adjective;
-    destination.oneMoreAdjective = self.oneMoreAdjectiveTextField.text;
+    self.story.oneMoreAdjective = self.oneMoreAdjectiveTextField.text;
+    destination.story = self.story;
+//    destination.anotherAdjective = self.anotherAdjective;
+//    destination.name = self.name;
+//    destination.adjective = self.adjective;
+//    destination.oneMoreAdjective = self.oneMoreAdjectiveTextField.text;
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }

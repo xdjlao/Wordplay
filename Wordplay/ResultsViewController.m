@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSArray *stringArray = @[@"One day, ", self.name, @" was walking into Mobile Makers when he noticed how ", self.adjective, @", ", self.anotherAdjective, @", and ", self.oneMoreAdjective];
+    NSArray *stringArray = @[@"One day, ", self.story.name, @" was walking into Mobile Makers when he noticed how ", self.story.adjective, @", ", self.story.anotherAdjective, @", and ", self.story.oneMoreAdjective, @" his students were."];
     
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
  

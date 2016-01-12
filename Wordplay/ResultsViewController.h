@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Story.h"
 
 @interface ResultsViewController : UIViewController
 
-@property NSString *adjective;
-@property NSString *name;
-@property NSString *anotherAdjective;
-@property NSString *oneMoreAdjective;
+@property Story * story;
+//@property NSString *adjective;
+//@property NSString *name;
+//@property NSString *anotherAdjective;
+//@property NSString *oneMoreAdjective;
 
 @end

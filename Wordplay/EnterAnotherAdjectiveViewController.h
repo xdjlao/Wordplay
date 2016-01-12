@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Story.h"
 
 @interface EnterAnotherAdjectiveViewController : UIViewController
 
-@property NSString *name;
-@property NSString *adjective;
+@property Story *story;
+//@property NSString *name;
+//@property NSString *adjective;
 
 @end

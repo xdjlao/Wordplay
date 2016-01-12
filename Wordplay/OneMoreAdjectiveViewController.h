@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Story.h"
 
 @interface OneMoreAdjectiveViewController : UIViewController
-@property NSString *adjective;
-@property NSString *name;
-@property NSString *anotherAdjective;
+
+@property Story *story;
+//@property NSString *adjective;
+//@property NSString *name;
+//@property NSString *anotherAdjective;
 
 @end
