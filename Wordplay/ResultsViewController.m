@@ -17,9 +17,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.resultsTextView.text = [NSString stringWithFormat:@"One day, %@ was walking into Mobile Makers when he noticed how %@, %@, and %@ his students were.", self.name, self.adjective, self.anotherAdjective, self.oneMoreAdjective];
-//    NSS
-    // Do any additional setup after loading the view.
+
+    NSArray *stringArray = @[@"One day, ", self.name, @" was walking into Mobile Makers when he noticed how ", self.adjective, @", ", self.anotherAdjective, @", and ", self.oneMoreAdjective];
+    
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] init];
+ 
+    [attributedString beginEditing];
+    
+    UIFont *textfont = [UIFont boldSystemFontOfSize:15.0];
+    
+    for(int i=0; i<stringArray.count; i++){
+        if(i%2 != 1) {
+            NSAttributedString *string = [[NSAttributedString alloc] initWithString:[stringArray objectAtIndex:i]];
+            [attributedString appendAttributedString:string];
+        } else {
+            NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:textfont, NSFontAttributeName, nil];
+            NSAttributedString *string = [[NSAttributedString alloc] initWithString:[stringArray objectAtIndex:i] attributes:attributes];
+            [attributedString appendAttributedString:string];
+        }
+    }
+    
+    [attributedString endEditing];
+    
+    self.resultsTextView.attributedText = attributedString;
+    // Do any additional setup after loading the view
 }
 
 - (void)didReceiveMemoryWarning {
