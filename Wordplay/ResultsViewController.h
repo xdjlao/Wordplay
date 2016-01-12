@@ -12,9 +12,5 @@
 @interface ResultsViewController : UIViewController
 
 @property Story * story;
-//@property NSString *adjective;
-//@property NSString *name;
-//@property NSString *anotherAdjective;
-//@property NSString *oneMoreAdjective;
 
 @end

@@ -12,8 +12,5 @@
 @interface OneMoreAdjectiveViewController : UIViewController
 
 @property Story *story;
-//@property NSString *adjective;
-//@property NSString *name;
-//@property NSString *anotherAdjective;
 
 @end
